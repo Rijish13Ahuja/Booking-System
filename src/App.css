@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+.app {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f4f6f9;
+  border-radius: 8px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav span {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #8e8e93;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav .active {
+  font-weight: bold;
+  color: #007aff;
+}
+
+.city-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e1e4e8;
+}
+
+.city-tabs span {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #8e8e93;
+}
+
+.city-tabs .active {
+  font-weight: bold;
+  color: #007aff;
+  border-bottom: 2px solid #007aff;
+}
+
+.shifts-list {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-row {
+  background-color: #f5f7fa;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.shift-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.shift-info div {
+  margin-right: 10px;
+}
+
+.book-btn {
+  background-color: white;
+  color: #00c853;
+  border: 2px solid #00c853;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn.unavailable {
+  color: rgba(0, 200, 83, 0.3);
+  border-color: rgba(0, 200, 83, 0.3);
+  cursor: not-allowed;
+}
+
+.book-btn:hover:not(.unavailable) {
+  background-color: rgba(0, 200, 83, 0.1);
+}
+
+.cancel-btn {
+  background-color: white;
+  color: #ff1744;
+  border: 2px solid #ff1744;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: rgba(255, 23, 68, 0.1);
 }
